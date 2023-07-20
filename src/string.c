@@ -1,6 +1,8 @@
 #include "string.h"
 
 #ifdef LINUX
+#include <string.h>
+
 int strcpy_s(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource)
 {
     int nCopied = -1;
