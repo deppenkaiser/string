@@ -1,27 +1,27 @@
-#include "string.h"
+#include "string/string.h"
 
 int strcpy_s(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource)
 {
-    int nCopied = -1;
+    int copied = STRING_ERROR;
 
     if (nDestinantionSizeBytes >= strlen(pSource))
     {
         strcpy(pDestination, pSource);
-        nCopied = 0;
+        copied = 0;
     }
 
-    return nCopied;
+    return copied;
 }
 
 int strcat_s(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource)
 {
-    int nDone = -1;
+    int done = STRING_ERROR;
 
     if ((strlen(pDestination) + strlen(pSource)) < nDestinantionSizeBytes)
     {
         strcat(pDestination, pSource);
-        nDone = 0;
+        done = 0;
     }
 
-    return nDone;
+    return done;
 }
