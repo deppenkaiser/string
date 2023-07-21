@@ -15,7 +15,7 @@ target_sources(string PRIVATE
 )
 
 target_include_directories(string PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
 target_link_libraries(string

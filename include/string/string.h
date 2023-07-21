@@ -4,6 +4,7 @@
 #include <string.h>
 
 #define STRING_MAXLEN 4096
+#define STRING_ERROR -1
 
 typedef char string_t[STRING_MAXLEN];
 
