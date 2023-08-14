@@ -8,5 +8,5 @@
 
 typedef char string_t[STRING_MAXLEN];
 
-int strcpy_s(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource);
-int strcat_s(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource);
+int string_copy(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource);
+int string_cat(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource);
