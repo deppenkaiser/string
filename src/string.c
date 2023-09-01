@@ -1,6 +1,7 @@
 #include "string/string.h"
 
 #include <sys/stat.h>
+#include <libgen.h>
 
 int string_copy(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource)
 {
@@ -37,4 +38,9 @@ bool string_directory_exists(const char* directory)
 void string_directory_create(const char* directory)
 {
     mkdir(directory, 0700);
+}
+
+const char* string_dirname_from_filepath(char* filepath)
+{
+    return dirname(filepath);
 }
