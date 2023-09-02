@@ -2,27 +2,28 @@
 
 #include <sys/stat.h>
 #include <libgen.h>
+#include <unistd.h>
 
-int string_copy(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource)
+int string_copy(char* destination, size_t destinantion_size_bytes, const char* source)
 {
     int copied = STRING_ERROR;
 
-    if (nDestinantionSizeBytes >= strlen(pSource))
+    if (destinantion_size_bytes >= strlen(source))
     {
-        strcpy(pDestination, pSource);
+        strcpy(destination, source);
         copied = 0;
     }
 
     return copied;
 }
 
-int string_cat(char* pDestination, size_t nDestinantionSizeBytes, const char* pSource)
+int string_cat(char* destination, size_t destinantion_size_bytes, const char* source)
 {
     int done = STRING_ERROR;
 
-    if ((strlen(pDestination) + strlen(pSource)) < nDestinantionSizeBytes)
+    if ((strlen(destination) + strlen(source)) < destinantion_size_bytes)
     {
-        strcat(pDestination, pSource);
+        strcat(destination, source);
         done = 0;
     }
 
@@ -43,4 +44,9 @@ void string_directory_create(const char* directory)
 const char* string_dirname_from_filepath(char* filepath)
 {
     return dirname(filepath);
+}
+
+bool string_filepath_exist(char* filepath)
+{
+    return access(filepath, F_OK) == 0;
 }
