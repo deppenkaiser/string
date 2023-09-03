@@ -15,3 +15,4 @@ const char* string_dirname_from_filepath(char* filepath);
 bool string_directory_exists(const char* directory);
 void string_directory_create(const char* directory);
 bool string_filepath_exist(char* filepath);
+const char* string_append_directory_to_path_and_create(const char* path, const char* directory);

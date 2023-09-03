@@ -50,3 +50,19 @@ bool string_filepath_exist(char* filepath)
 {
     return access(filepath, F_OK) == 0;
 }
+
+const char* string_append_directory_to_path_and_create(const char* path, const char* directory)
+{
+    static string_t _path = {0};
+
+    string_copy(_path, sizeof(string_t), path);
+    string_cat(_path, sizeof(string_t), "/");
+    string_cat(_path, sizeof(string_t), directory);
+
+    if (string_directory_exists(_path) == false)
+    {
+        string_directory_create(_path);
+    }
+
+    return _path;
+}
