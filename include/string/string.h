@@ -16,3 +16,4 @@ bool string_directory_exists(const char* directory);
 void string_directory_create(const char* directory);
 bool string_filepath_exist(char* filepath);
 const char* string_append_directory_to_path_and_create(const char* path, const char* directory);
+int string_calculate_substring_index(const char* string, const char* sub_string);
