@@ -1,10 +1,11 @@
 #include "string/string.h"
 
+#include <string.h>
 #include <sys/stat.h>
 #include <libgen.h>
 #include <unistd.h>
 
-int string_copy(char* destination, size_t destinantion_size_bytes, const char* source)
+int32_t string_copy(char* destination, size_t destinantion_size_bytes, const char* source)
 {
     int copied = STRING_ERROR;
 
@@ -17,7 +18,7 @@ int string_copy(char* destination, size_t destinantion_size_bytes, const char* s
     return copied;
 }
 
-int string_cat(char* destination, size_t destinantion_size_bytes, const char* source)
+int32_t string_cat(char* destination, size_t destinantion_size_bytes, const char* source)
 {
     int done = STRING_ERROR;
 
@@ -67,7 +68,7 @@ const char* string_append_directory_to_path_and_create(const char* path, const c
     return _path;
 }
 
-int string_calculate_substring_index(const char* string, const char* sub_string)
+int32_t string_calculate_substring_index(const char* string, const char* sub_string)
 {
     int index = -1;
     char* delimiter = strstr(string, sub_string);
