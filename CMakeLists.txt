@@ -13,5 +13,5 @@ target_sources(string PRIVATE
     string.c
 )
 
-target_include_directories(string PRIVATE
+target_include_directories(string PUBLIC
 )
