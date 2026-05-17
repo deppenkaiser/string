@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
+include_guard(GLOBAL)
 
 project(string LANGUAGES C)
 
@@ -14,4 +15,5 @@ target_sources(string PRIVATE
 )
 
 target_include_directories(string PUBLIC
+	${CMAKE_CURRENT_SOURCE_DIR}
 )
