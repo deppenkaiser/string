@@ -5,6 +5,7 @@
 #include <libgen.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <limits.h>
 
 int32_t string_copy(char* destination, size_t destinantion_size_bytes, const char* source)
 {
@@ -46,6 +47,16 @@ void string_directory_create(const char* directory)
 const char* string_dirname_from_filepath(char* filepath)
 {
     return dirname(filepath);
+}
+
+void string_get_exe_path(char* exe_path, size_t buffer_size)
+{
+    ssize_t len = readlink("/proc/self/exe", exe_path, buffer_size - 1);
+	exe_path[len] = '\0';
+	if (len < 0)
+	{
+		string_copy(exe_path, buffer_size, "unknown");
+	}
 }
 
 bool string_filepath_exist(char* filepath)

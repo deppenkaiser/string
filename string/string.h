@@ -12,6 +12,7 @@ typedef char string_t[STRING_MAXLEN];
 int32_t string_copy(char* destination, size_t destinantion_size_bytes, const char* source);
 int32_t string_cat(char* destination, size_t destinantion_size_bytes, const char* source);
 const char* string_dirname_from_filepath(char* filepath);
+void string_get_exe_path(char* exe_path, size_t buffer_size);
 bool string_directory_exists(const char* directory);
 void string_directory_create(const char* directory);
 bool string_filepath_exist(char* filepath);
