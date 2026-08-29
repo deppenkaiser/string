@@ -38,3 +38,7 @@ cmake --build build
 
 In ein Projekt einbinden: `add_subdirectory(../../libraries/string …)`,
 Einbindung des Headers über den Include-Pfad `<string/string.h>`.
+
+## Wiki
+
+Dokumentation: [string – String-, Pfad- und Terminal-Helfer](https://czybor.i234.me/wiki/sw-module/string/) (Quartz-Wiki)
