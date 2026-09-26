@@ -18,4 +18,6 @@ target_include_directories(string PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+target_compile_options(string PRIVATE -fPIC)
+
 target_link_libraries(string PUBLIC)
