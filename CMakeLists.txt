@@ -14,13 +14,10 @@ target_sources(string PRIVATE
     string.c
 )
 
-target_include_directories(string
-	PUBLIC
-		${CMAKE_CURRENT_SOURCE_DIR}/..
-	PRIVATE
-		${CMAKE_CURRENT_SOURCE_DIR}
+target_include_directories(string PUBLIC
+	${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(string PRIVATE -fPIC)
 
-target_link_libraries(string PRIVATE)
+target_link_libraries(string PUBLIC)
