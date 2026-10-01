@@ -1,11 +1,11 @@
 #include "string/string.h"
 
+#include <libgen.h>
+#include <limits.h>
+#include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
-#include <libgen.h>
 #include <unistd.h>
-#include <stdio.h>
-#include <limits.h>
 
 int32_t string_copy(char* destination, size_t destinantion_size_bytes, const char* source)
 {

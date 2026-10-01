@@ -1,8 +1,8 @@
 #pragma once
 
-#include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #define STRING_MAXLEN 4096
 #define STRING_ERROR -1
